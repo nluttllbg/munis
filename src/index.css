@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ember-primary: #E63926;
+  --color-ember-hover: #CC2E1C;
+  --color-ember-active: #B02415;
+  --color-ember-light: #FCE8E6;
+
+  --color-brioche-secondary: #F4A261;
+  --color-brioche-hover: #E88F48;
+  --color-brioche-light: #FEF3E8;
+
+  --color-flame-accent: #FF6B35;
+
+  --color-bg-base: #0E0E10;
+  --color-surface-card: #18181B;
+  --color-surface-elevated: #222226;
+  --color-border-subtle: #2E2E34;
+
+  --color-text-primary: #FAF7F2;
+  --color-text-secondary: #C4C0B8;
+  --color-text-muted: #8A867E;
+}
+
+@layer base {
+  html {
+    background-color: #0E0E10;
+    color: #FAF7F2;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.shadow-ember-glow {
+  box-shadow: 0 4px 20px rgba(230, 57, 38, 0.25);
+}
+
+.shadow-modal-deep {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
